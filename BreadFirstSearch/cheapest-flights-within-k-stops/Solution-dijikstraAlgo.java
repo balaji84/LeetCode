@@ -1,11 +1,12 @@
 class Solution {
 
-//    Runtime: 14 ms, faster than 61.00% of Java online submissions for Cheapest Flights Within K Stops.
-//Memory Usage: 38.9 MB, less than 74.07% of Java online submissions for Cheapest Flights Within K Stops.
+    //Runtime: 14 ms, faster than 61.00% of Java online submissions for Cheapest Flights Within K Stops.
+    //Memory Usage: 38.8 MB, less than 74.07% of Java online submissions for Cheapest Flights Within K Stops.
 
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int K) {
+        int len = flights.length;
         Map<Integer,Map<Integer,Integer>> adjMap = new HashMap<>();
-         for(int i=0;i<flights.length;i++){
+         for(int i=0;i<len;i++){
              adjMap.put(flights[i][0],new HashMap<>());
         }
         //[[0,1,100],[1,2,100],[0,2,500]]
@@ -19,7 +20,7 @@ class Solution {
 
         }
         
-       PriorityQueue<Node> pq = new PriorityQueue<Node>(1, new Comparator<Node>(){
+       PriorityQueue<Node> pq = new PriorityQueue<Node>(n/2, new Comparator<Node>(){
           public int compare(Node node1, Node node2){
               return node1.cost - node2.cost;
           } 
