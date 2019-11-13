@@ -30,6 +30,7 @@ class Solution {
             if(dest == dst) return cost;
             Map<Integer,Integer> map = adjMap.get(dest);
             if(map ==null)continue;
+            //since stops limitation given.
             if(stops >0){
                 for(int city : map.keySet()){
                     pq.offer(new Node(cost+ map.get(city) , city, stops-1));
