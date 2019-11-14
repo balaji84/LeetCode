@@ -1,5 +1,6 @@
 //Runtime: 4 ms, faster than 20.90% of Java online submissions for Surrounded Regions.
 //Memory Usage: 40.4 MB, less than 96.43% of Java online submissions for Surrounded Regions.
+//visited flag is unnecessary it decrease the runtime,since we already change value to *.
 
 class Solution {
     public void solve(char[][] board) {
