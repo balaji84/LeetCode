@@ -35,6 +35,14 @@ class Solution {
         // left<- 1-> right
         //        |
         //        right
+        
+        
+        //below is a island. Also outside boundary is also water (0) so return for outof boundary conditions also.
+        //    0
+        //    |
+        //  0-1-0
+        //    |
+        //    0
         if(i<0 || j<0 || i>=r || j>=c || grid[i][j]!='1'){
                    return;
         }
