@@ -64,7 +64,7 @@ class Solution {
              layer ++;
         }
         //if no fresh fruit means all rotton so no of time taken = layer-1
-        //if fresh remainging means some block is there so no where it gets rotton
+        //if fresh remaining means some empty is there so no where it gets rotton
         //like 
         //2 1 1 
         //0 1 1
