@@ -28,6 +28,13 @@ class Solution {
         int r = grid.length;
         int c = grid[0].length;
         
+        //traverse from 1 if adjacent is 0 chance of islands
+        //then return to check other sides like
+        //        top
+        //        |
+        // left<- 1-> right
+        //        |
+        //        right
         if(i<0 || j<0 || i>=r || j>=c || grid[i][j]!='1'){
                    return;
         }
