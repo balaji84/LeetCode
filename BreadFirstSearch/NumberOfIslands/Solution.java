@@ -21,6 +21,9 @@ class Solution {
         return count;
     }
     
+    //use void since if we return for case 
+    //i<0 or j<0 or i> row length or j>col
+    //then count gets incremented.
     private void dfs(char grid[][], int i, int j){
         int r = grid.length;
         int c = grid[0].length;
