@@ -1,3 +1,35 @@
+///Runtime: 11 ms, faster than 96.12% of Java online submissions for Minimum Height Trees.
+//Memory Usage: 47.8 MB, less than 94.44% of Java online submissions for Minimum Height Trees.
+
+//Input: n = 6, edges = [[0, 3], [1, 3], [2, 3], [4, 3], [5, 4]]
+
+//     0  1  2
+//      \ | /
+//        3
+//        |
+//        4
+//        |
+//        5 
+
+
+//[3,4]
+
+//idea is cut leaf nodes. 
+
+//[0] -  [3]
+//[1] -  [3]
+//[2] -  [3]
+//[3] -  [0,1,2,4]
+//[4] -  [3,5]
+//[5] -  [4]
+
+//layer 1 cut leaves i.e which do not have any child 
+//since 0 ,1,2,5 has one in list so leave nodes so never can be parent.   
+//After cut these leaves (0 ,1,2,5) size of tree is 2  so minimum 2 required to form parent child
+//trees (a->b) so these 2 are minimum height tree.
+//[3]- [4]
+//[4]- [5]
+//finally 
 class Solution {
     public List<Integer> findMinHeightTrees(int n, int[][] edges) {
         List<Integer> result = new ArrayList<Integer>();
