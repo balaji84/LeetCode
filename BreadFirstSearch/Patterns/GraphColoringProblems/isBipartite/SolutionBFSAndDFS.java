@@ -37,8 +37,8 @@ class Solution {
     //Memory Usage: 44.2 MB, less than 63.42% of Java online submissions .
 
     private boolean dfs(int[][] graph, int[] colors, int index,int color) {
-        if (colors[index] == -color)
-            return false;
+     //   if (colors[index] == -color)
+        //    return false;
         colors[index] = color;
         for (int other: graph[index]) {
             if (colors[other] == color)
