@@ -5,7 +5,7 @@ class Solution {
          
         for (int i = 0; i < g.length; i++){
             if (colors[i] == 0) {
-              //if(!bfs(g,colors,i,1)) return false;  
+             //if(!bfs(g,colors,i,1)) return false;  
               if(!dfs(g,colors,i,1)) return false;
             }
         }
@@ -17,7 +17,7 @@ class Solution {
     private boolean bfs(int[][] g,int[] colors ,int index,int color ){
         Queue<Integer> q = new LinkedList<>();
         q.add(index);
-        colors[index] = 1;
+        colors[index] = color;
         while (!q.isEmpty()) {
             Integer node = q.poll();
             for (int adjacent : g[node]){
