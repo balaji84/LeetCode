@@ -41,7 +41,8 @@ class Solution {
         //    return false;
         colors[index] = color;
         for (int other: graph[index]) {
-            if (colors[other] == color)
+             //since color is current value before it starts recurse
+            if (colors[other] == color) 
                 return false;
             if (colors[other] == 0)
                 if (!dfs(graph,colors, other, -color))
