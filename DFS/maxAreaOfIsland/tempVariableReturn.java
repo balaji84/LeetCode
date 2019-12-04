@@ -1,3 +1,6 @@
+//Runtime: 2 ms, faster than 99.63% of Java online submissions for Max Area of Island.
+//Memory Usage: 38.8 MB, less than 96.30% of Java online submissions for Max Area of Island.
+
 class Solution {
     public int maxAreaOfIsland(int[][] grid) {
       int r = grid.length;
