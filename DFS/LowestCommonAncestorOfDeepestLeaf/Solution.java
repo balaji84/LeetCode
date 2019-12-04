@@ -7,6 +7,9 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+
+//Runtime: 5 ms, faster than 100% of Java online submissions for Lowest Common Ancestor of Deepest Leaves.
+//Memory Usage: 39.4 MB, less than 100.00% of Ja
 class Solution {
     
     TreeNode node = null;
