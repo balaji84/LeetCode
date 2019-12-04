@@ -11,7 +11,7 @@
  //Runtime: 5 ms, faster than 8.11% of Java online submissions for Lowest Common Ancestor of Deepest Leaves.
 //Memory Usage: 39.4 MB, less than 100.00%
 class Solution {
-    
+    //parameterized max instead of global variable
      TreeNode node = null;
      public TreeNode lcaDeepestLeaves(TreeNode root) {
        
