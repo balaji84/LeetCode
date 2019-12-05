@@ -5,7 +5,12 @@ flow: used for  &&
         dfs(grid, i+1,j, visited) &&
         dfs(grid, i,j-1, visited) && //if && it breaks when false now it runs all 4 cases
         dfs(grid, i,j+1, visited));
-        
+    
+  logic:
+  =====
+    
+     it breaks if any of cases fails let say if top(i-1) is returning false then other cases (i+1-bottom, j-1 - left
+     and j+1-right) wont execute 
      
    logs:
    ====
