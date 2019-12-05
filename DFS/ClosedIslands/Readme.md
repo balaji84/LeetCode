@@ -1,12 +1,15 @@
 flow: used for  &&
 ===================
 
- boolean isIsland = (dfs(grid, i-1,j, visited) &&
+      boolean isIsland = (dfs(grid, i-1,j, visited) &&
         dfs(grid, i+1,j, visited) &&
         dfs(grid, i,j-1, visited) && //if && it breaks when false now it runs all 4 cases
         dfs(grid, i,j+1, visited));
         
-        
+     
+   logs:
+   ====
+     
               ===Solution.closedIsland():i :0 j:0
            Solution.dfs():i:0 j:0
            Solution.dfs():i:-1 j:0
@@ -186,6 +189,16 @@ flow: used for  &&
            Solution.dfs():i:10 j:9
       Solution.main()8
 
+        
+        
+        
+    flow for &
+    ==========
+    
+        boolean isIsland = (dfs(grid, i-1,j, visited) &
+        dfs(grid, i+1,j, visited) &
+        dfs(grid, i,j-1, visited) & //if && it breaks when false now it runs all 4 cases
+        dfs(grid, i,j+1, visited));
         
 
 
