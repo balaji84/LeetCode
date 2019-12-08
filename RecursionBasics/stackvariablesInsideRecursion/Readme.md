@@ -1,36 +1,28 @@
 
 
+ 
+  
+     class Solution {
+        int left =1, right = 1;
+        public boolean isBalanced(TreeNode root) {
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
-    int left =1, right = 1;
-    public boolean isBalanced(TreeNode root) {
-        
-        return helper(root)<=1?true:false;
-    }
-    
-    private int helper(TreeNode root){
-        if(root == null)return 0;
-                System.out.println(" = root:"+root.val);
+            return helper(root)<=1?true:false;
+        }
 
-        int left = 1+ helper(root.left);
-            System.out.println("left11111:"+left );
-            //only on returning value of left gets updated
-        right = 1+ helper(root.right);
-    System.out.println("left:"+left + " right:"+right);
-        
-        
-        return Math.abs(left-right);
+        private int helper(TreeNode root){
+            if(root == null)return 0;
+                    System.out.println(" = root:"+root.val);
+
+            int left = 1+ helper(root.left);
+                System.out.println("left11111:"+left );
+                //only on returning value of left gets updated
+            right = 1+ helper(root.right);
+        System.out.println("left:"+left + " right:"+right);
+
+
+            return Math.abs(left-right);
+        }
     }
-}
 
 output:
 =======
