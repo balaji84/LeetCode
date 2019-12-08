@@ -74,12 +74,5 @@ Version 2:
                       = root:3
                        = root:9
                       left11111:2
-                      left:1 right:1
-                      left11111:1
-                       = root:20
-                       = root:15
-                      left11111:1
-                      left:1 right:1
-                      left11111:1
-                       = root:7
-
+                      left:1 right:1 //in right it is still 1
+                      
