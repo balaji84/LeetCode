@@ -74,5 +74,5 @@ Version 2:
                       = root:3
                        = root:9
                       left11111:2
-                      left:1 right:1 //after right return it is still 1
+                      left:1 right:1 //after right return ,left it is still 1
                       
