@@ -1,7 +1,36 @@
 
 Note:
 =====
-left never gets updated it is always 1. 
+
+same logic as MaxDepthOfRecursion 
+
+    public int maxDepth(TreeNode root) {
+         
+        if(root==null){
+            return 0;
+        }
+        int left = 1+maxDepth(root.left);
+        int right = 1+maxDepth(root.right);
+        
+          System.out.println("root:"+root.val + " left:"+left + " right:"+right);
+        
+        return Math.max(left , right);
+        
+    }
+    
+    input : [3,9,20,null,null,15,7]
+    
+    output:
+    =====
+    root:9 left:1 right:1
+    root:15 left:1 right:1
+    root:7 left:1 right:1
+    root:20 left:2 right:2
+    root:3 left:2 right:3
+    
+    
+left never gets updated it is always 1. because output depends on return return Math.abs(left-right); if changed to
+Math.max(left,right) then above will come.
  
   
      class Solution {
