@@ -24,17 +24,17 @@ class Solution {
     private void helper(List<List<Integer>> result,
              List<Integer> list,     TreeNode root, int sum){
         if(root == null)return ;
-        sum = sum-root.val;
-         list.add(root.val);
-        if(root.left == null && root.right==null && sum == 0){
+        list.add(root.val);
+        
+        if(root.left == null && root.right==null && sum-root.val == 0){
             result.add(new ArrayList<Integer>(list));
         }
         
        
-        helper(result,list,root.left,sum);
-        helper(result,list,root.right,sum);
+        helper(result,list,root.left,sum-root.val);
+        helper(result,list,root.right,sum-root.val);
         
-        list.remove(list.size()-1);
+        list.remove(list.size()-1);//delete last left node adding right node
     }
     
     
