@@ -28,6 +28,16 @@ class Solution {
 
         int left= Math.max(0, helper(root.left,max));
         int right= Math.max(0,helper(root.right,max));
+    
+     
+     //NOTE:
+     //maxValue = Math.max(maxValue, left + right + node.val);
+    //return Math.max(left, right) + node.val;
+    //maxValue is the value which recording whether this current root is the final root, so we use left + right + node.val. 
+    //But to the upper layer(after return statement), we cannot choose both left and right branches, 
+    //so we need to select the larger one, so we use max(left, right) + node.val to prune the lower brunch.
+
+
         max[0]  = Math.max(max[0],left+right+root.val);
         
         return Math.max(left,right)+root.val;
