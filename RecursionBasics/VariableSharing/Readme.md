@@ -3,6 +3,9 @@
 https://github.com/arunsadhasivam/LeetCode/tree/master/DFS/RecursionPatterns/LongestIncreasingPaths
 
 
+we cant share variable in some cases like below since we calculate max for each coordinate i.e
+from (0,0) to (0,1),(1,0) .i.e left,right,top,bottom so we need to calculate the max separately for
+each coordinates i.e left,right,top,bottom.
 
 Variable Sharing 
 ================
