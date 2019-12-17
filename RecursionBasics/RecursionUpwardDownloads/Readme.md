@@ -1,6 +1,6 @@
 
-//recursion still left or right is null:
-=============================================
+Recursion still left or right   end of tree reaches:
+=====================================================
 
        class Solution {
         public int maxAncestorDiff(TreeNode root) {
@@ -23,8 +23,8 @@
     }
 }
 
-//while recursion returns:
-=============================================
+Flow when recursion returns:
+============================
 
      private int helper(TreeNode root,int val,int max){
         if(root ==null)return 0;
