@@ -1,8 +1,12 @@
-class Solution {
-    public int maxAncestorDiff(TreeNode root) {
-        
-       return helper(root,root.val,0);
-    }
+
+//recursion still left or right is null:
+=============================================
+
+       class Solution {
+        public int maxAncestorDiff(TreeNode root) {
+
+           return helper(root,root.val,0);
+        }
     
     private int helper(TreeNode root,int val,int max){
         if(root ==null)return 0;
@@ -19,8 +23,10 @@ class Solution {
     }
 }
 
+//while recursion returns:
+=============================================
 
-private int helper(TreeNode root,int val,int max){
+     private int helper(TreeNode root,int val,int max){
         if(root ==null)return 0;
         
         
