@@ -14,7 +14,7 @@ public class Solution {
         //if we have multiple if conditions and we are selecting range
         //based on previous one like i=0; j=i+1 ,z=i+1 it is good to avoid
         //<= since at some point some values fall in to 2 ranges and creates duplicate.
-        
+        //it will cause collision and causing logic to break;
         
         //eg. below
         //-8 36 23 -15
