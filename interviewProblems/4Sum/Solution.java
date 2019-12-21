@@ -10,11 +10,31 @@ public class Solution {
         
         Collections.sort(A);
         
-        // [ 29, 10, -16, -7, 21, 17, 6, -8, 36, 23, -15 ]
+      
         //if we have multiple if conditions and we are selecting range
         //based on previous one like i=0; j=i+1 ,z=i+1 it is good to avoid
         //<= since at some point some values fall in to 2 ranges and creates duplicate.
         
+        
+        //eg. below
+        //-8 36 23 -15
+        //if i<=len-3
+        
+        //pass 1
+          //-8
+          //36
+          //23, -15
+          
+          
+          //pass2 
+         // 36 23 -15(len==3)
+         //i<=len-3 will cause
+         //36 to be selected.
+         //3
+          
+          
+        //full traversal  
+            // [ 29, 10, -16, -7, 21, 17, 6, -8, 36, 23, -15 ] ,target=52
         //pass 1
             //29(select 1)
             // 10 (select 1)
