@@ -1,6 +1,9 @@
 1) when using nested array like 4 sum where nested loop start from previous loop index +1 better
 avoid using <= always use  i<len since mainloop and second loop will collide
       
+      
+      
+      
       int len = a.size()-1;
       for(int i =0;i<=n-3;i++)  //since 1 value select from this remaining 3 from other
       {
