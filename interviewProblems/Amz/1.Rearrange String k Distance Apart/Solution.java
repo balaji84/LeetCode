@@ -26,9 +26,11 @@ public class RearrangeKString {
 		// sort the chars by frequency
 		PriorityQueue<Character> queue = new PriorityQueue<Character>(new Comparator<Character>() {
 			public int compare(Character c1, Character c2) {
-				if (map.get(c2).intValue() != map.get(c1).intValue()) {
+				if (map.get(c2).intValue() != map.get(c1).intValue()) {//if both have same frequency
 					return map.get(c2) - map.get(c1);
 				} else {
+					//if both have same frequency , then sort based on chrononicall order(a-z)
+					//abcabc else it will be acbacb since c is last it pushed front.
 					return c1.compareTo(c2);
 				}
 			}
