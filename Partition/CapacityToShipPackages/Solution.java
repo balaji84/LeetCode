@@ -13,8 +13,10 @@ class Solution {
         
         while(min<=max){
            int  mid = min + (max -min)/2;
+            //55-10 =45/2 , 45-1=44/2 , 42/2 = 21 as it get reduces days count will increase.
             int partition = getPartition(weights, mid);
             if(partition <D){
+                // 55-10 =45/2 , 45-1=44/2 , 42/2 = 21 as it get reduces days count will increase.
                 max = mid-1;
             }else{
                 min = mid+1;
